@@ -13,6 +13,17 @@ $(document).ready(
       }
     );
 
+    $(document).keydown(
+      function() {
+
+        if (event.which == 37) {
+          prevImg();
+        } else if (event.which == 39) {
+          nextImg();
+        }
+
+      }
+    );
   }
 );
 
