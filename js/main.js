@@ -23,7 +23,27 @@ $(document).ready(
         }
 
       }
+
     );
+
+    $(".fa-circle").click(
+      function(){
+        var circles = $(".fa-circle"); //elementi convertibili in array
+        var images = document.getElementsByClassName("image"); //elementi in classe per numbero come array
+        var circlesElement = document.getElementsByClassName("fa-circle"); //elementi in classe per numbero come array
+        var currentActive = $(".slider-wrapper .active");
+
+        currentActive.removeClass("active");
+
+        for (var i = 0; i < circles.length; i++) {
+          if (this == circles.toArray()[i]) {
+            images[i].classList.add("active");
+            circlesElement[i].classList.add("active");
+          }
+        }
+      }
+    );
+
   }
 );
 
